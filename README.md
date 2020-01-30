@@ -9,7 +9,7 @@ Note: This code is **very** messy. Don't write code like this. Seriously.
 ## Example usage
 ```
 pipenv install
-python3 interferometry.py
+python3 interferometry.py sample_data/IMG_0917.MOV
 ```
 
 To calculate the number of peaks, run the Jupyter notebook like so:
@@ -17,7 +17,7 @@ To calculate the number of peaks, run the Jupyter notebook like so:
 ipython analysis.ipynb
 ```
 
-Fine tuning can be done by editing `trials.json`.
+Fine tuning can be done inside the Jupyter notebook.
 
 ## License
 GPL-3.0-only
