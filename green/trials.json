@@ -3,30 +3,66 @@
         "coord": { "top": { "0": 248 , "1": 245}, "bot": { "0": 323 , "1": 388}},
         "add": 2,
         "test": false,
-        "skip": false 
+        "skip": false
     },
     "2": {
         "coord": { "top": { "0": 267 , "1": 236}, "bot": { "0": 319 , "1": 338}},
         "add": 2,
         "test": false,
-        "skip": false 
+        "skip": false
     },
     "3": {
         "coord": { "top": { "0": 236 , "1": 215}, "bot": { "0": 341, "1": 376}},
         "add": 2,
         "test": false,
-        "skip": false 
+        "skip": false
     },
     "4": {
         "coord": { "top": { "0": 256 , "1": 221}, "bot": { "0": 337 , "1": 393}},
         "add": 1,
         "test": false,
-        "skip": false 
+        "skip": false
     },
     "5": {
         "coord": { "top": { "0": 213 , "1": 350}, "bot": { "0": 339 , "1": 559}},
         "add": 1,
         "test": false,
-        "skip": false 
+        "skip": false
+    },
+    "6": {
+        "coord": { "top": { "0": 254 , "1": 190}, "bot": { "0": 343 , "1": 394}},
+        "add": 1,
+        "test": false,
+        "skip": false
+    },
+    "7": {
+        "coord": { "top": { "0": 223 , "1": 419}, "bot": { "0": 371 , "1": 594}},
+        "add": 1,
+        "test": false,
+        "skip": false
+    },
+    "8": {
+        "coord": { "top": { "0": 257 , "1": 226}, "bot": { "0": 373 , "1": 534}},
+        "add": 4,
+        "test": false,
+        "skip": false
+    },
+    "9": {
+        "coord": { "top": { "0": 233 , "1": 299}, "bot": { "0": 373 , "1": 593}},
+        "add": 1,
+        "test": false,
+        "skip": false
+    },
+    "10": {
+        "coord": { "top": { "0": 232 , "1": 303}, "bot": { "0": 363 , "1": 585}},
+        "add": 2,
+        "test": false,
+        "skip": false
+    },
+    "11": {
+        "coord": { "top": { "0": 228 , "1": 325}, "bot": { "0": 339 , "1": 586}},
+        "add": 1,
+        "test": false,
+        "skip": false
     }
 }
