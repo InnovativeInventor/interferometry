@@ -64,5 +64,29 @@
         "add": 1,
         "test": false,
         "skip": false
+    },
+    "12": {
+        "coord": { "top": { "0": 230 , "1": 182}, "bot": { "0": 382 , "1": 313}},
+        "add": 1,
+        "test": false,
+        "skip": false
+    },
+    "13": {
+        "coord": { "top": { "0": 271 , "1": 230}, "bot": { "0": 349 , "1": 404}},
+        "add": 1,
+        "test": false,
+        "skip": false
+    },
+    "14": {
+        "coord": { "top": { "0": 275 , "1": 224}, "bot": { "0": 340 , "1": 326}},
+        "add": 0,
+        "test": false,
+        "skip": false
+    },
+    "15": {
+        "coord": { "top": { "0": 252, "1": 202}, "bot": { "0": 320, "1": 372}},
+        "add": 0,
+        "test": false,
+        "skip": false
     }
 }

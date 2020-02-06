@@ -1,0 +1,117 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{caption}
+\usepackage{empheq}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{makecell}
+
+\setlength{\parindent}{0pt}
+
+\newcommand{\answer}[1]{\begin{center}\boxed{#1}\end{center}}
+\newcommand{\degree}{$^{\circ}$}
+
+\newenvironment{changemargin}[2]{%
+\begin{list}{}{%
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{#1}%
+\setlength{\rightmargin}{#2}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{\parskip}%
+}%
+\item[]}{\end{list}}
+
+\title{Determining the Wavelength of a Laser using Interferometry Techniques}
+\author{Maxwell Fan}
+\date{February 2020}
+
+\begin{document}
+
+\maketitle
+
+\section*{Results}
+% TODO: ensure figure number is accurate 
+
+\begin{figure}[!ht]
+\begingroup
+    \rightskip
+    \leftskip
+    \begin{center}
+        \includegraphics[width=300pt,height=200pt]{6_bad.png}
+        \caption*{Figure 1. Graph of an inaccurate count of peaks due to under sampling in trial 6.}
+    \end{center}
+\endgroup
+\end{figure}
+
+\begin{table}[!ht]
+\centering
+\captionsetup{labelformat=empty}
+\caption*{Table 1. Table of Fringe Counting Results.}
+\begin{tabular}{lllll}
+\centering
+Trial \#           & Fringe Count & Length (microns) & Wavelength (nm) & Drop  \\
+\hline
+1                  & 92           & 25               & 543.5     & No    \\
+\hline
+2                  & 91           & 25               & 549.5     & No    \\
+\hline
+3                  & 58           & 25               & 862.1     & Yes   \\
+\hline
+4                  & 40           & 25               & 1250            & Yes   \\
+\hline
+5                  & 90           & 25               & 555.6     & No    \\
+\hline
+6                  & 33           & 25               & 1515.2     & Yes   \\
+\hline
+7                  & 74           & 25               & 675.7     & Yes   \\
+\hline
+8                  & 85           & 25               & 588.2     & Yes   \\
+\hline
+9                  & 91           & 25               & 549.5     & No    \\
+\hline
+10                 & 97           & 25               & 515.5     & No    \\
+\hline
+11                 & 89           & 25               & 561.8     & No    \\
+\hline
+12                 & 91           & 25               & 549.5     & No    \\
+\hline
+13                 & 98           & 25               & 510.2     & No    \\
+\hline
+14                 & 105          & 25               & 476.2     & No    \\
+\hline
+15                 & 97           & 25               & 515.5     & No    \\
+                   &              &                  &                 &       \\
+                   &              &                  &                 &       \\
+                   &              &                  &                 &       \\
+Average            &              &                  & 532.7      &       \\
+\hline
+Standard Deviation &              &                  & 27.1     &
+\end{tabular}
+\end{table}
+
+Out of the 15 trials where data was collected and analyzed, five of them were dropped due to the excessively noisy data collected. 
+Since the slow-motion camera has a frame rate of $240 \si{\hertz}$, the Nyquist frequency is $120 \si{\hertz}$. However, due to the noisy data, one frame is not enough to establish if the box is capturing a peak or a trough, so the maximum fringe rate that the implementation was capable of measuring to a high degree of accuracy was approximately $40 \si{\hertz}$. This was determined empirically from the data of the failed trials from the previous experiments, as well as the dropped trials in this experiment, particularly trial 6 (Figure 1). 
+
+\bigskip
+
+From the results, we can determine that the wavelength of the unknown laser is likely $532.7 \pm 27.1 \si{\nano\meter}$, assuming that it is within one standard deviation of the measurements (Table 1).
+
+\section*{Discussion}
+Our data seems quite reasonable, and are mostly within the expected wavelengths for green light. However, since the same peak-counting mechanism was used for all data collected, the entire dataset may be consistently skewed to either undercount or overcount peaks. 
+To prevent this bias from occurring, 10-30 peaks from each trial was randomly sampled and manually counted to increase confidence in the peak counting mechanism. Nonetheless, randomly sampling the peak counts consumed the majority of the analysis time and did intially catch a few uncounted peaks and resulted in tweaks to the peak counting mechanism. 
+But, once the fringe-counting process was mostly automated, it took, on average, one minute to capture the data, 5 minutes to process each slow-motion video, and 5 minutes of compute time to obtain reliable data, a significant improvement on manual counting. 
+
+
+\bigskip
+
+Furthermore, an attempt was made to automate the initial pre-processing stage, which consisted of cutting and cropping the footage. This was attempted by iteratively removing outer rows and columns that had an average brightness below a threshold percent of the total average brightness. However, this was found to be an unreliable method of cropping regions since some footage contained reflections of the sun. Additionally, we attempted to subtract the blue and red channels from the green channels to eliminate white colors, rather than aggregating the three channels, but found this method to have little impact on the peaks detected.
+
+\bigskip
+
+\end{document}
+
